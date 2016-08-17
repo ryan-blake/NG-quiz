@@ -28,7 +28,7 @@
       </h2>
     </div>
 
-      <div ng-controller="listCtrl as list">
+      <div ng-controller="listCtrl as list" ng-hide="list.quizActive">
         <form class="form-inline well well-sm clearfix">
           <span class="glyphicon glyphicon-search"></span>
           <input
@@ -36,6 +36,10 @@
             placeholder="Search..."
             class="form-control"
             ng-model="list.search">
+            <button class="btn btn-warning pull-right"
+                    ng-click="list.activateQuiz()">
+              <strong>Start </strong>
+              </button>
         </form>
         <div class="row">
           <div class="col-sm-6" ng-repeat="turtle in list.data | filter: list.search">

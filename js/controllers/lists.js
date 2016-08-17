@@ -8,15 +8,20 @@
     function ListController(){
       var vm = this;
 // data
-      vm.dummyData = "HelloWahrld! >_<";
+      vm.quizActive = false;
       vm.data = turtlesData
 // active data
       vm.activeTurtle = {};
       vm.changeActiveTurtle = changeActiveTurtle;
+      vm.activateQuiz = activateQuiz;
       vm.search = "";
 
       function changeActiveTurtle(index){
         vm.activeTurtle = index;
+      }
+
+      function activateQuiz(){
+        vm.quizActive = true;
       }
     }
 
