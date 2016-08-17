@@ -4,13 +4,15 @@
     // name of controller for html ref
     .controller("listCtrl", ListController);
 
+    ListController.$inject = ['quizMetrics'];
+
 // HTML sees this through ng-controller listCtrl as list
-    function ListController(){
+    function ListController(quizMetrics){
       var vm = this;
 // data
-      vm.quizActive = false;
+      vm.quizMetrics = quizMetrics;
+      // vm.quizActive = false;
       vm.data = turtlesData
-// active data
       vm.activeTurtle = {};
       vm.changeActiveTurtle = changeActiveTurtle;
       vm.activateQuiz = activateQuiz;
@@ -21,7 +23,8 @@
       }
 
       function activateQuiz(){
-        vm.quizActive = true;
+        // vm.quizActive = true;
+        quizMetrics.changeState(true);
       }
     }
 
