@@ -16,11 +16,14 @@
 
   <script src="js/app.js"></script>
   <script src="js/controllers/lists.js"></script>
-
+  <script src="js/controllers/quiz.js"></script>
+  <script src="js/factories/quizMetrics.js"></script>
 
 </head>
+
 <body>
   <div class="container-fluid">
+
     <div class="page-header">
       <h1>Facts Quiz</h1>
       <h2>Learning Stuff about stuff:
@@ -54,6 +57,7 @@
                   <p><strong>Size: </strong> {{turtle.size}} </p>
                   <p><strong>Average lifespan: </strong> {{turtle.lifespan}} </p>
                   <p><strong>Diet: </strong> {{turtle.diet}} </p>
+
                   <button class="btn btn-primary pull-right"
                     data-toggle="modal"
                     data-target="#turtle-info"
@@ -91,7 +95,14 @@
               </div>
             </div>
           </div>
-      </div>
+      </div> <!-- list controller -->
+
+        <div ng-controller="quizCtrl as quiz">
+
+        </div>
+
+
+
   </div>
 </body>
 </html>
