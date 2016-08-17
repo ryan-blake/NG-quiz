@@ -7,9 +7,17 @@
 // HTML sees this through ng-controller listCtrl as list
     function ListController(){
       var vm = this;
-
+// data
       vm.dummyData = "HelloWahrld! >_<";
       vm.data = turtlesData
+// active data
+      vm.activeTurtle = {};
+      vm.changeActiveTurtle = changeActiveTurtle;
+      vm.search = "";
+
+      function changeActiveTurtle(index){
+        vm.activeTurtle = index;
+      }
     }
 
     var turtlesData = [

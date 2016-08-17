@@ -2,3 +2,11 @@
   width: 100%;
   height: 182px;
 }
+
+.top-buffer{
+  margin-top: 30px;
+}
+
+#turtle-info {
+  color: white;
+}
