@@ -24,7 +24,7 @@
 
       function activateQuiz(){
         // vm.quizActive = true;
-        quizMetrics.changeState(true);
+        quizMetrics.changeState("quiz", true);
       }
     }
 
